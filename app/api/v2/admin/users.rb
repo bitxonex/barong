@@ -47,7 +47,7 @@ module API
                      default: 'created'
             optional :ordering,
                      values: { value: -> (p){ %w[asc desc].include?(p) }, message: 'user.ordering.invalid_ordering' },
-                     default: 'asc',
+                     default: 'desc',
                      desc: 'If set, returned values will be sorted in specific order, defaults to \'asc\'.'
             optional :order_by,
                      values: { value: -> (p){ User.new.attributes.keys.include?(p) }, message: 'user.ordering.invalid_attribute' },
